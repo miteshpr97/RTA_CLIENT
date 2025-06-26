@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alert</title>
+  </head>
+
+  <body>
+    <div
+      class="alert alert-primary"
+      role="alert"
+      id="alert"
+      style="
+        display: none;
+        position: fixed;
+        opacity: 0.9;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 400px;
+        z-index: 1000;
+      "
+    >
+      <h4 class="alert-heading">Error!</h4>
+      <p class="text-danger" id="error-message"></p>
+    </div>
+  </body>
+</html>

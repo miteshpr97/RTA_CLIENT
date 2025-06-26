@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+  
+.main {
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.screen-section {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #dddddd;
+    background-color: #f5f5f5;
+}
+  
+.screen-section .header-section {
+    height: 15%;
+    width: 100%;
+    display: flex;
+}
+  
+.header-section .right-header {
+    width: 70%;
+    height: 100%;
+    background-color: #e30613;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-section .right-header h4 {
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+  
+.header-section .left-header {
+    width: 30%;
+    height: 100%;
+}
+  
+.header-section .left-header img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+  
+.screen-section .main-screen {
+    height: 85%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.screen-section .main-screen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../../assets/rta-bg.webp");
+    background-position: center;
+    background-size: cover;
+    opacity: 0.1; 
+    z-index: 0; 
+}
+  
+.screen-section .main-screen .input {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    opacity: 1; 
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+  
+.function-section-upper {
+    width: 100%;
+    max-height: 70%;
+    padding: 5px;
+    overflow-y: auto;
+  
+}
+ 
+.inspection-list {
+    list-style-type: none;
+    padding-left: 0;
+    padding: 5px 15px;
+}
+
+
+
+.inspection-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+}
+
+.step-number {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-color: #e30613;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 27px;
+}
+
+.step-name {
+    flex-grow: 1;
+    color: black;
+    font-size: 18px; 
+    margin-right: 20px; 
+}
+
+.inspection-checkbox {
+    margin-left: 10px;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5); 
+    margin-left: auto;
+    margin: 0px 10px; 
+    accent-color: green; 
+    cursor: pointer;
+}
+
+/* Apply red border and text color to No checkbox when selected */
+.checked-no input[type="checkbox"] {
+    border: 2px solid red;
+    color: red;
+    accent-color: red;
+}
+
+.checked-no span {
+    color: red;
+}
+
+.function-section-below {
+    width: 100%;
+    height: 30%;
+}
+  
+.below-input-section {
+    width: 100%;
+    height: 70%;
+    padding: 5px;
+    border: 1px solid #e30613;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.below-input-section p {
+    font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+  
+.below-input-section #selected-inspection {
+    color: #e30613;
+}
+  
+.below-input-section .btn {
+    padding:6px 20px;
+}
+  
+.details-section {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+  
+.details-section .Bus-Number {
+    font-size: 12px;
+    margin: 0;
+    color: #e30613;
+}
+
+.details-section .Bus-Number span {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+    color:  black;
+} 
+  
+.details-section .user-name {
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 0;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}

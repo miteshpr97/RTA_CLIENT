@@ -1,0 +1,253 @@
+/* Reset & global settings */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Layout containers */
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen-section {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #dddddd;
+  background-color: white;
+}
+
+/* Header */
+.header-section {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.right-header {
+  width: 70%;
+  height: 100%;
+  background-color: #e30613;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-header h4 {
+  font-size: 19px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.left-header {
+  width: 30%;
+  height: 100%;
+}
+
+.left-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Main Screen */
+.main-screen {
+  height: 85%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.status-indicator {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.status-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+
+.main-screen::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url("../assets/rta-bg.webp");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+/* Upper Function Section */
+.function-section-upper {
+  width: 100%;
+  height: 70%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inspection List */
+.inspection-list {
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  padding: 10px 15px;
+  max-height: 100%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.inspection-list li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.step-name {
+  color: black;
+  font-size: 17px;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+.step-number {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background-color: #e30613;
+  color: white;
+  text-align: center;
+  border-radius: 3px;
+  margin-right: 15px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 27px;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+  margin-left: auto;
+  accent-color: green;
+  cursor: pointer;
+}
+
+/* Bottom Section */
+.function-section-below {
+  width: 100%;
+  height: 30%;
+}
+
+.below-input-section {
+  width: 100%;
+  height: 70%;
+  padding: 5px;
+  border: 1px solid #e30613;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.below-input-section p {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+#selected-inspection {
+  color: #e30613;
+}
+
+.btn-section .btn {
+  padding: 6px 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-section .btn:hover {
+  transform: scale(1.05);
+}
+
+/* Details Section */
+.details-section {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.Bus-Number {
+  font-size: 10px;
+  margin: 0;
+  color: #e30613;
+}
+
+.Bus-Number span {
+  font-size: 10px;
+  font-weight: 600;
+  margin: 0;
+  color: black;
+}
+
+.user-name {
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 0;
+  font-weight: 600;
+  color: black;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+  .header-section {
+    flex-direction: column;
+  }
+
+  .right-header, .left-header {
+    width: 100%;
+    text-align: center;
+  }
+
+  .details-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
