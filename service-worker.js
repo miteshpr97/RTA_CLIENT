@@ -2,8 +2,8 @@
 
 const CACHE_NAME = 'rta-v3';
 const urlsToCache = [
-    '/',
-    '/index.html',
+    './',
+    './index.html',
     './Login/Login.html',
     './Login/Login.css',
     './Login/login.js',
